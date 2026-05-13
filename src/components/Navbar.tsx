@@ -57,7 +57,9 @@ export default function Navbar() {
         </div>
 
         <a
-          href="#early-access"
+          href="https://forms.gle/Xu89Yx1pPpwfCtAk8"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden md:inline-flex items-center px-5 py-2 rounded-full bg-orange-500 text-white text-sm font-medium hover:bg-orange-600 transition-all duration-300 cursor-pointer"
         >
           Join Early Access
@@ -101,7 +103,9 @@ export default function Navbar() {
                 </button>
               ))}
               <a
-                href="#early-access"
+                href="https://forms.gle/Xu89Yx1pPpwfCtAk8"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
                 className="mt-2 inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-orange-500 text-white text-sm font-medium hover:bg-orange-600 transition-all duration-300"
               >

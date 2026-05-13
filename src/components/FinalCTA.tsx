@@ -106,7 +106,9 @@ export default function FinalCTA() {
           className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <motion.a
-            href="#"
+            href="https://forms.gle/Xu89Yx1pPpwfCtAk8"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{
               scale: 1.05,
               boxShadow: "0 0 40px rgba(249,115,22,0.45)",
@@ -118,7 +120,9 @@ export default function FinalCTA() {
           </motion.a>
 
           <motion.a
-            href="#"
+            href="https://forms.gle/Xu89Yx1pPpwfCtAk8"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{
               scale: 1.05,
               backgroundColor: "rgba(249,115,22,1)",

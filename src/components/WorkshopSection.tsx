@@ -232,16 +232,14 @@ export default function WorkshopSection() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="relative sm:-rotate-3 sm:hover:rotate-0 transition-transform duration-500"
             >
-              <div className="rounded-2xl shadow-2xl overflow-hidden">
-                <Image
-                  src="/mockups/w1.png"
-                  alt="Your Requests screen"
-                  width={240}
-                  height={480}
-                  unoptimized
-                  className="w-48 sm:w-56 md:w-64 h-auto"
-                />
-              </div>
+              <Image
+                src="/mockups/w1.png"
+                alt="Your Requests screen"
+                width={240}
+                height={480}
+                unoptimized
+                className="w-48 sm:w-56 md:w-64 h-auto"
+              />
               <p className="text-center text-xs sm:text-sm text-gray-500 mt-3 sm:mt-4">
                 Your Requests
               </p>
@@ -254,16 +252,14 @@ export default function WorkshopSection() {
               transition={{ duration: 0.7, delay: 0.4 }}
               className="relative sm:rotate-3 sm:hover:rotate-0 transition-transform duration-500"
             >
-              <div className="rounded-2xl shadow-2xl overflow-hidden">
-                <Image
-                  src="/mockups/w2.png"
-                  alt="Request Details screen"
-                  width={240}
-                  height={480}
-                  unoptimized
-                  className="w-48 sm:w-56 md:w-64 h-auto"
-                />
-              </div>
+              <Image
+                src="/mockups/w2.png"
+                alt="Request Details screen"
+                width={240}
+                height={480}
+                unoptimized
+                className="w-48 sm:w-56 md:w-64 h-auto"
+              />
               <p className="text-center text-xs sm:text-sm text-gray-500 mt-3 sm:mt-4">
                 Request Details
               </p>
@@ -289,7 +285,9 @@ export default function WorkshopSection() {
           </h3>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <a
-              href="#join-workshop"
+              href="https://forms.gle/Xu89Yx1pPpwfCtAk8"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-3.5 bg-orange-500 text-white font-semibold rounded-full
                          hover:bg-orange-600 transition-colors duration-200
                          shadow-lg shadow-orange-500/25 text-center"
@@ -297,7 +295,9 @@ export default function WorkshopSection() {
               Join as Workshop
             </a>
             <a
-              href="#watch-demo"
+              href="https://forms.gle/Xu89Yx1pPpwfCtAk8"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-3.5 border-2 border-orange-500 text-orange-500 font-semibold rounded-full
                          hover:bg-orange-50 transition-colors duration-200 text-center"
             >
