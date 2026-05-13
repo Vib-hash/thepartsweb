@@ -232,15 +232,17 @@ export default function WorkshopSection() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="relative -rotate-3 hover:rotate-0 transition-transform duration-500"
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-200">
-                <Image
-                  src="/mockups/workshop-requests.png"
-                  alt="Your Requests screen"
-                  width={280}
-                  height={560}
-                  unoptimized
-                  className="w-48 sm:w-56 md:w-64 h-auto"
-                />
+              <div className="rounded-[2rem] bg-gray-900 p-2 shadow-2xl">
+                <div className="rounded-[1.5rem] overflow-hidden bg-white">
+                  <Image
+                    src="/mockups/workshop-requests.png"
+                    alt="Your Requests screen"
+                    width={240}
+                    height={480}
+                    unoptimized
+                    className="w-48 sm:w-56 md:w-64 h-auto"
+                  />
+                </div>
               </div>
               <p className="text-center text-sm text-gray-500 mt-4">
                 Your Requests
@@ -254,15 +256,17 @@ export default function WorkshopSection() {
               transition={{ duration: 0.7, delay: 0.4 }}
               className="relative rotate-3 hover:rotate-0 transition-transform duration-500"
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-200">
-                <Image
-                  src="/mockups/workshop-request-details.png"
-                  alt="Request Details screen"
-                  width={280}
-                  height={560}
-                  unoptimized
-                  className="w-48 sm:w-56 md:w-64 h-auto"
-                />
+              <div className="rounded-[2rem] bg-gray-900 p-2 shadow-2xl">
+                <div className="rounded-[1.5rem] overflow-hidden bg-white">
+                  <Image
+                    src="/mockups/workshop-request-details.png"
+                    alt="Request Details screen"
+                    width={240}
+                    height={480}
+                    unoptimized
+                    className="w-48 sm:w-56 md:w-64 h-auto"
+                  />
+                </div>
               </div>
               <p className="text-center text-sm text-gray-500 mt-4">
                 Request Details

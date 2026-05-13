@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   title: "PartWeb — India's Real-Time Spare Parts Network",
   description:
     "PartWeb helps workshops instantly find spare parts from verified vendors while enabling vendors to increase their reach and manage inventory through AI-powered voice workflows.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

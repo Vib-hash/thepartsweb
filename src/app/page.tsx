@@ -14,11 +14,11 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
+      <HowItWorks />
       <WorkshopSection />
       <VendorSection />
       <TrustSection />
       <VoiceShowcase />
-      <HowItWorks />
       <MetricsSection />
       <FinalCTA />
       <Footer />

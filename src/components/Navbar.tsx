@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const navLinks = [
   { label: "For Workshops", href: "#workshops" },
@@ -31,10 +32,16 @@ export default function Navbar() {
         scrolled ? "bg-white shadow-sm" : "bg-white/80"
       }`}
     >
-      <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-        <a href="#" className="text-2xl font-bold tracking-tight">
-          <span className="text-gray-900">Part</span>
-          <span className="text-orange-500">Web</span>
+      <div className="mx-auto max-w-7xl px-6 py-3 flex items-center justify-between">
+        <a href="/" className="flex items-center">
+          <Image
+            src="/partweb-logo.png"
+            alt="PartWeb"
+            width={160}
+            height={40}
+            unoptimized
+            className="h-9 w-auto"
+          />
         </a>
 
         <div className="hidden md:flex items-center gap-8">

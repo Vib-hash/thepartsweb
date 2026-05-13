@@ -1,23 +1,25 @@
+import Image from "next/image";
+
 const linkColumns = [
   {
     title: "Product",
     links: [
-      { label: "Workshops", href: "#" },
-      { label: "Vendors", href: "#" },
+      { label: "Workshops", href: "#workshops" },
+      { label: "Vendors", href: "#vendors" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About", href: "#" },
-      { label: "Contact", href: "#" },
+      { label: "About", href: "#about" },
+      { label: "Contact", href: "#about" },
     ],
   },
   {
     title: "Access",
     links: [
-      { label: "Early Access", href: "#" },
-      { label: "Vendor Partner", href: "#" },
+      { label: "Early Access", href: "#early-access" },
+      { label: "Vendor Partner", href: "#vendors" },
     ],
   },
 ];
@@ -36,9 +38,15 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="flex flex-col gap-12 md:flex-row md:justify-between">
           <div className="max-w-xs">
-            <a href="#" className="text-2xl font-bold tracking-tight">
-              <span className="text-white">Part</span>
-              <span className="text-orange-500">Web</span>
+            <a href="/" className="inline-block">
+              <Image
+                src="/partweb-logo.png"
+                alt="PartWeb"
+                width={140}
+                height={36}
+                unoptimized
+                className="h-8 w-auto brightness-0 invert"
+              />
             </a>
             <p className="mt-3 text-sm leading-relaxed text-gray-500">
               Realtime Automotive Procurement Network

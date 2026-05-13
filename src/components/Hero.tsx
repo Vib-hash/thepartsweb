@@ -129,17 +129,19 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.7, ease: "easeOut" }}
-              className="relative z-10 -mr-6 rotate-[-4deg]"
+              className="relative z-10 -mr-4 rotate-[-4deg]"
             >
-              <div className="rounded-2xl shadow-xl overflow-hidden border border-gray-200">
-                <Image
-                  src="/mockups/workshop-requests.png"
-                  alt="Workshop requests interface"
-                  width={260}
-                  height={520}
-                  unoptimized
-                  className="block"
-                />
+              <div className="rounded-[2rem] bg-gray-900 p-2 shadow-2xl">
+                <div className="rounded-[1.5rem] overflow-hidden bg-white">
+                  <Image
+                    src="/mockups/workshop-requests.png"
+                    alt="Workshop requests interface"
+                    width={240}
+                    height={480}
+                    unoptimized
+                    className="block"
+                  />
+                </div>
               </div>
             </motion.div>
 
@@ -147,17 +149,19 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.7, ease: "easeOut" }}
-              className="relative z-20 -ml-6 rotate-[4deg]"
+              className="relative z-20 -ml-4 rotate-[4deg]"
             >
-              <div className="rounded-2xl shadow-xl overflow-hidden border border-gray-200">
-                <Image
-                  src="/mockups/vendor-part-requests-live.png"
-                  alt="Vendor live part requests"
-                  width={260}
-                  height={520}
-                  unoptimized
-                  className="block"
-                />
+              <div className="rounded-[2rem] bg-gray-900 p-2 shadow-2xl">
+                <div className="rounded-[1.5rem] overflow-hidden bg-white">
+                  <Image
+                    src="/mockups/vendor-part-requests-live.png"
+                    alt="Vendor live part requests"
+                    width={240}
+                    height={480}
+                    unoptimized
+                    className="block"
+                  />
+                </div>
               </div>
             </motion.div>
           </div>
