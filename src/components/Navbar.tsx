@@ -32,7 +32,7 @@ export default function Navbar() {
         scrolled ? "bg-white shadow-sm" : "bg-white/80"
       }`}
     >
-      <div className="mx-auto max-w-7xl px-6 py-3 flex items-center justify-between">
+      <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between sm:px-6">
         <a href="/" className="flex items-center">
           <Image
             src="/partweb-logo.png"
@@ -40,7 +40,7 @@ export default function Navbar() {
             width={160}
             height={40}
             unoptimized
-            className="h-9 w-auto"
+            className="h-7 w-auto sm:h-9"
           />
         </a>
 

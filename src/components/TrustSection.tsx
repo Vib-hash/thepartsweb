@@ -76,7 +76,7 @@ export default function TrustSection() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: 0.6 + i * 0.12, duration: 0.4 }}
-                className="relative overflow-hidden rounded-full border border-gray-200 bg-white px-6 py-3 shadow-sm"
+                className="relative overflow-hidden rounded-full border border-gray-200 bg-white px-4 py-2 shadow-sm sm:px-6 sm:py-3"
               >
                 {/* Shimmer overlay */}
                 <motion.div
@@ -100,7 +100,7 @@ export default function TrustSection() {
                   width={120}
                   height={48}
                   unoptimized
-                  className="relative h-12 w-auto object-contain"
+                  className="relative h-8 w-auto object-contain sm:h-12"
                 />
               </motion.div>
             ))}

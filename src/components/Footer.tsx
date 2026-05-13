@@ -53,7 +53,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="grid grid-cols-3 gap-10 md:gap-16">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-10 md:gap-16">
             {linkColumns.map((col) => (
               <div key={col.title}>
                 <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400">

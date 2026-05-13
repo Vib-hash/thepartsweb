@@ -60,7 +60,7 @@ export default function FinalCTA() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-gray-950 py-32 md:py-44"
+      className="relative overflow-hidden bg-gray-950 py-20 sm:py-28 md:py-36 lg:py-44"
     >
       <GlowOrb size={350} x="5%" y="20%" delay={0} />
       <GlowOrb size={280} x="75%" y="10%" delay={2} />
@@ -82,7 +82,7 @@ export default function FinalCTA() {
           variants={fadeUp}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="text-4xl font-bold leading-tight tracking-tight text-white md:text-6xl lg:text-7xl"
+          className="text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
         >
           India&apos;s Automotive Procurement Layer Is Coming Online.
         </motion.h2>
@@ -92,7 +92,7 @@ export default function FinalCTA() {
           variants={fadeUp}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-400"
+          className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-gray-400 sm:text-lg"
         >
           Join the next generation of workshops and spare parts vendors building
           faster automotive operations.
@@ -112,7 +112,7 @@ export default function FinalCTA() {
               boxShadow: "0 0 40px rgba(249,115,22,0.45)",
             }}
             whileTap={{ scale: 0.97 }}
-            className="inline-block cursor-pointer rounded-full bg-orange-500 px-10 py-4 text-base font-semibold text-white transition-colors hover:bg-orange-600"
+            className="inline-block w-full cursor-pointer rounded-full bg-orange-500 px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-orange-600 sm:w-auto sm:px-10 sm:py-4 sm:text-base"
           >
             Request Early Access
           </motion.a>
@@ -125,7 +125,7 @@ export default function FinalCTA() {
               color: "#fff",
             }}
             whileTap={{ scale: 0.97 }}
-            className="inline-block cursor-pointer rounded-full border border-orange-500 bg-transparent px-10 py-4 text-base font-semibold text-orange-500 transition-colors"
+            className="inline-block w-full cursor-pointer rounded-full border border-orange-500 bg-transparent px-8 py-3.5 text-sm font-semibold text-orange-500 transition-colors sm:w-auto sm:px-10 sm:py-4 sm:text-base"
           >
             Become a Vendor Partner
           </motion.a>

@@ -118,13 +118,13 @@ function InventoryTable({ inView }: { inView: boolean }) {
         </svg>
         AI Output — Inventory Updated
       </div>
-      <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
-        <table className="w-full text-left text-sm">
+      <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
+        <table className="w-full text-left text-xs sm:text-sm">
           <thead>
             <tr className="border-b border-gray-200 bg-gray-100 text-gray-500">
-              <th className="px-4 py-3 font-medium">Part</th>
-              <th className="px-4 py-3 font-medium">Qty</th>
-              <th className="px-4 py-3 font-medium">Price</th>
+              <th className="px-2 py-2 font-medium sm:px-4 sm:py-3">Part</th>
+              <th className="px-2 py-2 font-medium sm:px-4 sm:py-3">Qty</th>
+              <th className="px-2 py-2 font-medium sm:px-4 sm:py-3">Price</th>
             </tr>
           </thead>
           <tbody>
@@ -139,13 +139,13 @@ function InventoryTable({ inView }: { inView: boolean }) {
                 }
                 transition={{ duration: 1 }}
               >
-                <td className="px-4 py-3 text-gray-800">{row.part}</td>
-                <td className="px-4 py-3">
+                <td className="px-2 py-2 text-gray-800 sm:px-4 sm:py-3">{row.part}</td>
+                <td className="px-2 py-2 sm:px-4 sm:py-3">
                   <span className={highlightedRow >= i ? "font-semibold text-orange-500" : "text-gray-600"}>
                     {row.qty}
                   </span>
                 </td>
-                <td className="px-4 py-3 text-gray-600">{row.price}</td>
+                <td className="px-2 py-2 text-gray-600 sm:px-4 sm:py-3">{row.price}</td>
               </motion.tr>
             ))}
           </tbody>

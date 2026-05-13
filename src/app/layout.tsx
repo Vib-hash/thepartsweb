@@ -17,8 +17,13 @@ export const metadata: Metadata = {
   description:
     "PartWeb helps workshops instantly find spare parts from verified vendors while enabling vendors to increase their reach and manage inventory through AI-powered voice workflows.",
   icons: {
-    icon: "/favicon.png",
-    apple: "/favicon.png",
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.png",
   },
 };
 

@@ -58,11 +58,11 @@ function MetricCard({ metric, index, inView }: { metric: Metric; index: number; 
       {/* Orange top border accent */}
       <div className="h-1 w-full bg-gradient-to-r from-orange-600 via-orange-500 to-orange-400" />
 
-      <div className="px-6 py-8 text-center sm:py-10">
-        <p className="text-3xl font-bold tracking-tight text-orange-500 sm:text-4xl">
+      <div className="px-3 py-6 text-center sm:px-6 sm:py-10">
+        <p className="text-2xl font-bold tracking-tight text-orange-500 sm:text-3xl md:text-4xl">
           {displayValue}
         </p>
-        <p className="mt-2 text-sm leading-relaxed text-gray-600">{metric.label}</p>
+        <p className="mt-2 text-xs leading-relaxed text-gray-600 sm:text-sm">{metric.label}</p>
       </div>
     </motion.div>
   );
