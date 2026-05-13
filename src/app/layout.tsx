@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "PartWeb — India's Real-Time Spare Parts Network",
   description:
-    "PartWeb helps workshops instantly find spare parts from verified vendors while enabling vendors to manage inventory through AI-powered voice workflows.",
+    "PartWeb helps workshops instantly find spare parts from verified vendors while enabling vendors to increase their reach and manage inventory through AI-powered voice workflows.",
 };
 
 export default function RootLayout({
@@ -26,9 +26,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-black">{children}</body>
+      <body className="min-h-full flex flex-col bg-white text-gray-900">
+        {children}
+      </body>
     </html>
   );
 }

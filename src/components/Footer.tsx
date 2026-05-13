@@ -24,7 +24,7 @@ const linkColumns = [
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-950">
+    <footer className="bg-gray-950">
       <div
         className="h-px w-full"
         style={{
@@ -56,7 +56,7 @@ export default function Footer() {
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-sm text-gray-500 transition-colors hover:text-orange-500"
+                        className="text-sm text-gray-400 transition-colors hover:text-orange-500"
                       >
                         {link.label}
                       </a>
@@ -69,7 +69,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-neutral-800">
+      <div className="border-t border-gray-800">
         <div className="mx-auto max-w-6xl px-6 py-6">
           <p className="text-center text-sm text-gray-600">
             &copy; 2026 PartWeb. Built for India&apos;s automotive aftermarket

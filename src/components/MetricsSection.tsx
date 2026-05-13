@@ -53,7 +53,7 @@ function MetricCard({ metric, index, inView }: { metric: Metric; index: number; 
       initial={{ opacity: 0, y: 24 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay: 0.15 + index * 0.12, duration: 0.5, ease: [0.25, 0.4, 0, 1] }}
-      className="relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900"
+      className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm"
     >
       {/* Orange top border accent */}
       <div className="h-1 w-full bg-gradient-to-r from-orange-600 via-orange-500 to-orange-400" />
@@ -62,7 +62,7 @@ function MetricCard({ metric, index, inView }: { metric: Metric; index: number; 
         <p className="text-3xl font-bold tracking-tight text-orange-500 sm:text-4xl">
           {displayValue}
         </p>
-        <p className="mt-2 text-sm leading-relaxed text-gray-300">{metric.label}</p>
+        <p className="mt-2 text-sm leading-relaxed text-gray-600">{metric.label}</p>
       </div>
     </motion.div>
   );
@@ -73,15 +73,7 @@ export default function MetricsSection() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="relative bg-black py-24 sm:py-32">
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse at 50% 80%, rgba(249,115,22,0.05) 0%, transparent 50%)",
-        }}
-      />
-
+    <section className="relative bg-white py-24 sm:py-32">
       <div ref={ref} className="relative z-10 mx-auto max-w-5xl px-6">
         <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
           {metrics.map((metric, i) => (

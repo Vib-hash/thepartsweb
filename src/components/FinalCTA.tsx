@@ -36,7 +36,7 @@ function GlowOrb({
         left: x,
         top: y,
         filter: `blur(${size * 0.7}px)`,
-        opacity: 0.08,
+        opacity: 0.07,
       }}
       animate={{
         y: [0, -30, 0, 20, 0],
@@ -60,11 +60,7 @@ export default function FinalCTA() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden py-32 md:py-44"
-      style={{
-        background:
-          "linear-gradient(to bottom, #0a0a0a 0%, #111111 50%, #0a0a0a 100%)",
-      }}
+      className="relative overflow-hidden bg-gray-950 py-32 md:py-44"
     >
       <GlowOrb size={350} x="5%" y="20%" delay={0} />
       <GlowOrb size={280} x="75%" y="10%" delay={2} />

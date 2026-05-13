@@ -133,11 +133,44 @@ const cardVariants = {
 
 export default function VendorSection() {
   return (
-    <section id="vendors" className="relative py-24 px-4 sm:px-6 lg:px-8">
+    <section id="vendors" className="relative bg-gray-50 py-24 px-4 sm:px-6 lg:px-8">
       {/* Top separator */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-orange-500 to-transparent" />
 
       <div className="max-w-6xl mx-auto">
+        {/* Visual Classifier Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.4 }}
+          className="flex justify-center mb-10"
+        >
+          <div className="inline-flex items-center gap-2.5 px-6 py-2.5 bg-gray-900 rounded-full shadow-lg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2.5}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-5 h-5 text-orange-500"
+            >
+              <path d="M3 21h18" />
+              <path d="M5 21V7l8-4v18" />
+              <path d="M19 21V11l-6-4" />
+              <path d="M9 9v.01" />
+              <path d="M9 12v.01" />
+              <path d="M9 15v.01" />
+              <path d="M9 18v.01" />
+            </svg>
+            <span className="text-white font-bold text-sm tracking-wider uppercase">
+              For Vendors
+            </span>
+          </div>
+        </motion.div>
+
         {/* Headlines */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -146,10 +179,10 @@ export default function VendorSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             Your Inventory Shouldn&apos;t Live Inside WhatsApp Chats.
           </h2>
-          <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Receive relevant part requests and manage inventory using simple
             AI-powered voice commands.
           </p>
@@ -161,26 +194,27 @@ export default function VendorSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
+          className="flex flex-wrap justify-center gap-6 mb-20"
         >
           {features.map((feature, index) => (
             <motion.div
               key={index}
               variants={cardVariants}
-              className="group relative bg-neutral-900 border border-neutral-800 rounded-xl p-6 
-                         border-l-4 border-l-orange-500/60
-                         transition-all duration-300 
-                         hover:-translate-y-1 hover:border-orange-500/80 hover:shadow-[0_0_30px_-5px_rgba(249,115,22,0.3)]"
+              className="max-w-sm w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]
+                         group relative bg-white border border-gray-200 rounded-xl p-6
+                         border-l-4 border-l-gray-900 shadow-sm
+                         transition-all duration-300
+                         hover:-translate-y-1 hover:shadow-md"
             >
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-500">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-500">
                   {feature.icon}
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-2">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-gray-600 text-sm leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -205,7 +239,7 @@ export default function VendorSection() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="relative -rotate-3 hover:rotate-0 transition-transform duration-500"
             >
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-orange-500/10 border border-neutral-800">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-200">
                 <Image
                   src="/mockups/vendor-part-requests-live.png"
                   alt="Live requests view"
@@ -227,7 +261,7 @@ export default function VendorSection() {
               transition={{ duration: 0.7, delay: 0.4 }}
               className="relative rotate-3 hover:rotate-0 transition-transform duration-500"
             >
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-orange-500/10 border border-neutral-800">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-200">
                 <Image
                   src="/mockups/vendor-part-requests-replied.png"
                   alt="Replied requests view"
@@ -243,9 +277,9 @@ export default function VendorSection() {
             </motion.div>
           </motion.div>
 
-          {/* Subtle glow behind mockups */}
+          {/* Orange glow behind mockups */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-10">
-            <div className="w-80 h-80 rounded-full bg-orange-500/5 blur-3xl" />
+            <div className="w-96 h-96 rounded-full bg-orange-400/10 blur-3xl" />
           </div>
         </div>
 
@@ -257,22 +291,22 @@ export default function VendorSection() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-8">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
             Manage Inventory Without Typing Everything.
           </h3>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#join-vendor"
-              className="px-8 py-3.5 bg-orange-500 text-white font-semibold rounded-full 
-                         hover:bg-orange-600 transition-colors duration-200 
+              className="px-8 py-3.5 bg-orange-500 text-white font-semibold rounded-full
+                         hover:bg-orange-600 transition-colors duration-200
                          shadow-lg shadow-orange-500/25"
             >
               Join as Vendor
             </a>
             <a
               href="#explore-inventory-ai"
-              className="px-8 py-3.5 border-2 border-orange-500 text-orange-500 font-semibold rounded-full 
-                         hover:bg-orange-500/10 transition-colors duration-200"
+              className="px-8 py-3.5 border-2 border-orange-500 text-orange-500 font-semibold rounded-full
+                         hover:bg-orange-50 transition-colors duration-200"
             >
               Explore Inventory AI
             </a>

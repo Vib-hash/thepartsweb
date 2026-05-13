@@ -35,13 +35,13 @@ function WaveformBar({ index }: { index: number }) {
 function PhoneMockup() {
   return (
     <div className="relative mx-auto w-64 sm:w-72">
-      <div className="rounded-3xl border-2 border-neutral-700 bg-neutral-900 p-3 shadow-2xl">
+      <div className="rounded-3xl border-2 border-gray-200 bg-white p-3 shadow-xl">
         {/* Notch */}
-        <div className="mx-auto mb-4 h-5 w-20 rounded-full bg-neutral-800" />
+        <div className="mx-auto mb-4 h-5 w-20 rounded-full bg-gray-100" />
 
         {/* Screen content */}
-        <div className="rounded-2xl bg-neutral-950 px-4 py-6">
-          <div className="mb-4 text-center text-xs font-medium tracking-wider text-neutral-500 uppercase">
+        <div className="rounded-2xl bg-gray-50 px-4 py-6">
+          <div className="mb-4 text-center text-xs font-medium tracking-wider text-gray-400 uppercase">
             PartWeb Voice AI
           </div>
 
@@ -55,7 +55,7 @@ function PhoneMockup() {
           {/* Mic indicator */}
           <motion.div
             className="mx-auto mt-6 flex h-14 w-14 items-center justify-center rounded-full bg-orange-500"
-            animate={{ boxShadow: ["0 0 0px rgba(249,115,22,0.3)", "0 0 30px rgba(249,115,22,0.6)", "0 0 0px rgba(249,115,22,0.3)"] }}
+            animate={{ boxShadow: ["0 0 0px rgba(249,115,22,0.2)", "0 0 30px rgba(249,115,22,0.4)", "0 0 0px rgba(249,115,22,0.2)"] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           >
             <svg className="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -64,11 +64,11 @@ function PhoneMockup() {
             </svg>
           </motion.div>
 
-          <p className="mt-3 text-center text-xs text-neutral-500">Listening…</p>
+          <p className="mt-3 text-center text-xs text-gray-400">Listening…</p>
         </div>
 
         {/* Home bar */}
-        <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-neutral-700" />
+        <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-gray-200" />
       </div>
     </div>
   );
@@ -80,10 +80,10 @@ function SpeechBubble({ text, index, inView }: { text: string; index: number; in
       initial={{ opacity: 0, x: 30, scale: 0.9 }}
       animate={inView ? { opacity: 1, x: 0, scale: 1 } : {}}
       transition={{ delay: 0.3 + index * 0.4, duration: 0.5, ease: [0.25, 0.4, 0, 1] }}
-      className="relative rounded-2xl rounded-bl-sm border border-neutral-700 bg-neutral-800 px-5 py-3.5 shadow-lg"
+      className="relative rounded-2xl rounded-bl-sm border border-gray-200 bg-white px-5 py-3.5 shadow-sm"
     >
-      <p className="text-sm leading-relaxed text-neutral-200">&ldquo;{text}&rdquo;</p>
-      <div className="absolute -bottom-1 left-3 h-3 w-3 rotate-45 border-b border-r border-neutral-700 bg-neutral-800" />
+      <p className="text-sm leading-relaxed text-gray-800">&ldquo;{text}&rdquo;</p>
+      <div className="absolute -bottom-1 left-3 h-3 w-3 rotate-45 border-b border-r border-gray-200 bg-white" />
     </motion.div>
   );
 }
@@ -112,16 +112,16 @@ function InventoryTable({ inView }: { inView: boolean }) {
       transition={{ delay: 1.6, duration: 0.6 }}
       className="mt-8 w-full"
     >
-      <div className="mb-3 flex items-center gap-2 text-sm font-medium text-orange-400">
+      <div className="mb-3 flex items-center gap-2 text-sm font-medium text-orange-500">
         <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
         </svg>
         AI Output — Inventory Updated
       </div>
-      <div className="overflow-hidden rounded-xl border border-neutral-700 bg-neutral-900">
+      <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
         <table className="w-full text-left text-sm">
           <thead>
-            <tr className="border-b border-neutral-700 text-neutral-400">
+            <tr className="border-b border-gray-200 bg-gray-100 text-gray-500">
               <th className="px-4 py-3 font-medium">Part</th>
               <th className="px-4 py-3 font-medium">Qty</th>
               <th className="px-4 py-3 font-medium">Price</th>
@@ -131,21 +131,21 @@ function InventoryTable({ inView }: { inView: boolean }) {
             {inventoryRows.map((row, i) => (
               <motion.tr
                 key={i}
-                className="border-b border-neutral-800 last:border-0"
+                className="border-b border-gray-100 last:border-0"
                 animate={
                   highlightedRow >= i
-                    ? { backgroundColor: ["rgba(249,115,22,0.15)", "rgba(249,115,22,0.05)"] }
+                    ? { backgroundColor: ["rgba(249,115,22,0.12)", "rgba(249,115,22,0.04)"] }
                     : {}
                 }
                 transition={{ duration: 1 }}
               >
-                <td className="px-4 py-3 text-neutral-200">{row.part}</td>
+                <td className="px-4 py-3 text-gray-800">{row.part}</td>
                 <td className="px-4 py-3">
-                  <span className={highlightedRow >= i ? "font-semibold text-orange-400" : "text-neutral-300"}>
+                  <span className={highlightedRow >= i ? "font-semibold text-orange-500" : "text-gray-600"}>
                     {row.qty}
                   </span>
                 </td>
-                <td className="px-4 py-3 text-neutral-300">{row.price}</td>
+                <td className="px-4 py-3 text-gray-600">{row.price}</td>
               </motion.tr>
             ))}
           </tbody>
@@ -160,21 +160,13 @@ export default function VoiceShowcase() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="relative overflow-hidden bg-neutral-950 py-24 sm:py-32">
-      {/* Subtle radial glow */}
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background: "radial-gradient(ellipse at 30% 50%, rgba(249,115,22,0.04) 0%, transparent 60%)",
-        }}
-      />
-
+    <section className="relative overflow-hidden bg-gray-50 py-24 sm:py-32">
       <div ref={ref} className="relative z-10 mx-auto max-w-6xl px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-16 text-center text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl"
+          className="mb-16 text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-5xl"
         >
           Just Speak.{" "}
           <span className="text-orange-500">Your Inventory Updates Itself.</span>
@@ -192,7 +184,7 @@ export default function VoiceShowcase() {
 
           {/* Right — Commands + Table */}
           <div className="flex flex-col gap-5">
-            <p className="mb-2 text-xs font-medium tracking-wider text-neutral-500 uppercase">
+            <p className="mb-2 text-xs font-medium tracking-wider text-gray-400 uppercase">
               Example Voice Commands
             </p>
             {voiceCommands.map((cmd, i) => (

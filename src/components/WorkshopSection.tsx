@@ -132,11 +132,38 @@ const cardVariants = {
 
 export default function WorkshopSection() {
   return (
-    <section id="workshops" className="relative py-24 px-4 sm:px-6 lg:px-8">
+    <section id="workshops" className="relative bg-white py-24 px-4 sm:px-6 lg:px-8">
       {/* Top separator */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-orange-500 to-transparent" />
 
       <div className="max-w-6xl mx-auto">
+        {/* Visual Classifier Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.4 }}
+          className="flex justify-center mb-10"
+        >
+          <div className="inline-flex items-center gap-2.5 px-6 py-2.5 bg-orange-500 rounded-full shadow-lg shadow-orange-500/20">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2.5}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-5 h-5 text-white"
+            >
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+            </svg>
+            <span className="text-white font-bold text-sm tracking-wider uppercase">
+              For Workshops
+            </span>
+          </div>
+        </motion.div>
+
         {/* Headlines */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -145,10 +172,10 @@ export default function WorkshopSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             Stop Calling 20 Vendors for One Part.
           </h2>
-          <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Raise a request once and receive live responses from relevant spare
             parts vendors in minutes.
           </p>
@@ -160,26 +187,27 @@ export default function WorkshopSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
+          className="flex flex-wrap justify-center gap-6 mb-20"
         >
           {features.map((feature, index) => (
             <motion.div
               key={index}
               variants={cardVariants}
-              className="group relative bg-neutral-900 border border-neutral-800 rounded-xl p-6 
-                         border-l-4 border-l-orange-500/60
-                         transition-all duration-300 
-                         hover:-translate-y-1 hover:border-orange-500/80 hover:shadow-[0_0_30px_-5px_rgba(249,115,22,0.3)]"
+              className="max-w-sm w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]
+                         group relative bg-white border border-gray-200 rounded-xl p-6
+                         border-l-4 border-l-orange-500 shadow-sm
+                         transition-all duration-300
+                         hover:-translate-y-1 hover:shadow-md"
             >
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-500">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-500">
                   {feature.icon}
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-2">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-gray-600 text-sm leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -204,7 +232,7 @@ export default function WorkshopSection() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="relative -rotate-3 hover:rotate-0 transition-transform duration-500"
             >
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-orange-500/10 border border-neutral-800">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-200">
                 <Image
                   src="/mockups/workshop-requests.png"
                   alt="Your Requests screen"
@@ -226,7 +254,7 @@ export default function WorkshopSection() {
               transition={{ duration: 0.7, delay: 0.4 }}
               className="relative rotate-3 hover:rotate-0 transition-transform duration-500"
             >
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-orange-500/10 border border-neutral-800">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-200">
                 <Image
                   src="/mockups/workshop-request-details.png"
                   alt="Request Details screen"
@@ -242,9 +270,9 @@ export default function WorkshopSection() {
             </motion.div>
           </motion.div>
 
-          {/* Subtle glow behind mockups */}
+          {/* Orange glow behind mockups */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-10">
-            <div className="w-80 h-80 rounded-full bg-orange-500/5 blur-3xl" />
+            <div className="w-96 h-96 rounded-full bg-orange-400/10 blur-3xl" />
           </div>
         </div>
 
@@ -256,22 +284,22 @@ export default function WorkshopSection() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-8">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
             Find Parts Faster. Reduce Vehicle Downtime.
           </h3>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#join-workshop"
-              className="px-8 py-3.5 bg-orange-500 text-white font-semibold rounded-full 
-                         hover:bg-orange-600 transition-colors duration-200 
+              className="px-8 py-3.5 bg-orange-500 text-white font-semibold rounded-full
+                         hover:bg-orange-600 transition-colors duration-200
                          shadow-lg shadow-orange-500/25"
             >
               Join as Workshop
             </a>
             <a
               href="#watch-demo"
-              className="px-8 py-3.5 border-2 border-orange-500 text-orange-500 font-semibold rounded-full 
-                         hover:bg-orange-500/10 transition-colors duration-200"
+              className="px-8 py-3.5 border-2 border-orange-500 text-orange-500 font-semibold rounded-full
+                         hover:bg-orange-50 transition-colors duration-200"
             >
               Watch Demo
             </a>

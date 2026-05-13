@@ -52,7 +52,7 @@ function FlowConnector({ inView, index }: { inView: boolean; index: number }) {
       {/* Desktop — horizontal connector */}
       <div className="relative hidden items-center lg:flex" style={{ width: 80 }}>
         <svg className="h-8 w-full" viewBox="0 0 80 32" fill="none">
-          <line x1="0" y1="16" x2="80" y2="16" stroke="#404040" strokeWidth="2" strokeDasharray="6 4" />
+          <line x1="0" y1="16" x2="80" y2="16" stroke="#d1d5db" strokeWidth="2" strokeDasharray="6 4" />
         </svg>
         <motion.div
           className="absolute left-0 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-orange-500"
@@ -70,7 +70,7 @@ function FlowConnector({ inView, index }: { inView: boolean; index: number }) {
       {/* Mobile — vertical connector */}
       <div className="relative flex justify-center lg:hidden" style={{ height: 48 }}>
         <svg className="h-full w-8" viewBox="0 0 32 48" fill="none">
-          <line x1="16" y1="0" x2="16" y2="48" stroke="#404040" strokeWidth="2" strokeDasharray="6 4" />
+          <line x1="16" y1="0" x2="16" y2="48" stroke="#d1d5db" strokeWidth="2" strokeDasharray="6 4" />
         </svg>
         <motion.div
           className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 rounded-full bg-orange-500"
@@ -106,7 +106,7 @@ function StepCard({
     >
       {/* Number + Icon circle */}
       <div className="relative mb-5">
-        <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-neutral-700 bg-neutral-800 text-orange-400 transition-colors group-hover:border-orange-500/50 group-hover:bg-neutral-700">
+        <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-gray-200 bg-white text-orange-500 shadow-sm transition-colors group-hover:border-orange-300 group-hover:bg-orange-50">
           {step.icon}
         </div>
         <div className="absolute -right-2 -top-2 flex h-7 w-7 items-center justify-center rounded-full bg-orange-500 text-xs font-bold text-white shadow-lg">
@@ -114,10 +114,10 @@ function StepCard({
         </div>
       </div>
 
-      <h3 className="mb-2 text-base font-semibold leading-snug text-white">
+      <h3 className="mb-2 text-base font-semibold leading-snug text-gray-900">
         {step.title}
       </h3>
-      <p className="text-sm leading-relaxed text-gray-400">{step.description}</p>
+      <p className="text-sm leading-relaxed text-gray-600">{step.description}</p>
     </motion.div>
   );
 }
@@ -127,12 +127,12 @@ export default function HowItWorks() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="relative overflow-hidden bg-black py-24 sm:py-32">
+    <section className="relative overflow-hidden bg-white py-24 sm:py-32">
       <div
         className="pointer-events-none absolute inset-0"
         style={{
           backgroundImage:
-            "radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px)",
+            "radial-gradient(circle, rgba(0,0,0,0.04) 1px, transparent 1px)",
           backgroundSize: "40px 40px",
         }}
       />
@@ -142,7 +142,7 @@ export default function HowItWorks() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-4 text-center text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl"
+          className="mb-4 text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-5xl"
         >
           How It <span className="text-orange-500">Works</span>
         </motion.h2>
@@ -151,7 +151,7 @@ export default function HowItWorks() {
           initial={{ opacity: 0, y: 15 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mx-auto mb-16 max-w-xl text-center text-gray-400"
+          className="mx-auto mb-16 max-w-xl text-center text-gray-600"
         >
           From request to delivery in four simple steps — powered by AI routing.
         </motion.p>
